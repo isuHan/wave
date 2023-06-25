@@ -1,6 +1,7 @@
 package com.wave.domain.member;
 
 import com.wave.domain.BaseTimeEntity;
+import com.wave.domain.diary.Diary;
 import com.wave.dto.MemberFormDto;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,25 +18,31 @@ public class Member extends BaseTimeEntity {
     @Id
     @GeneratedValue
     @Column(name = "member_id")
-    private Long id;
+    private Long id; //회원 pk
 
-    private String name;
+    private String name; //이름
 
     @Column(unique = true)
-    private String email;
+    private String email; //이메일
 
-    private String password;
+    private String nickname; //닉네임
+
+    private String password; //비밀번호
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private Role role; //역할 구분(일반회원, 관리자)
+
 
     @Builder
-    public Member(String name, String email, String password, String address, Role role) {
+    public Member(Long id, String name, String email, String nickname, String password, Role role) {
+        this.id = id;
         this.name = name;
         this.email = email;
+        this.nickname = nickname;
         this.password = password;
         this.role = role;
     }
+
 
     public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder) {
         Member member = Member.builder()

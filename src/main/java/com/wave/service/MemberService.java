@@ -34,6 +34,7 @@ public class MemberService implements UserDetailsService {
         }
     }
 
+
     //loadUserByUsername() : UserDetailsService 의 메소드, 회원정보를 조회하여 사용자의 정보와 권한을 갖는 UserDetail 인터페이스 반환
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
