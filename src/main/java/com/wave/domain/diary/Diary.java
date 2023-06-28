@@ -1,16 +1,15 @@
 package com.wave.domain.diary;
 
 import com.wave.domain.member.Member;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 @Entity
 public class Diary {
 
@@ -24,8 +23,6 @@ public class Diary {
     @Column(length = 1000)
     private String content; //일기 내용
 
-    @Enumerated(EnumType.STRING)
-    private Trap trap; //감정의 덫
 
     private LocalDateTime createdAt = LocalDateTime.now(); //생성일
 
@@ -38,14 +35,12 @@ public class Diary {
     public Diary(int userId, String content, Trap trap) {
         this.userId = userId;
         this.content = content;
-        this.trap = trap;
     }
 
     //일기 수정
-    public void update(int userId, String content, Trap trap) {
+    public void update(int userId, String content) {
         this.userId = userId;
         this.content = content;
-        this.trap = trap;
         this.updatedAt = LocalDateTime.now();
     }
 
