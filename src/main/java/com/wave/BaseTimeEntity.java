@@ -1,4 +1,4 @@
-package com.wave.domain;
+package com.wave;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

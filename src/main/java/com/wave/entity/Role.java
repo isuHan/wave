@@ -1,4 +1,4 @@
-package com.wave.domain.member;
+package com.wave.entity;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
-package com.wave.domain.member;
+package com.wave.entity;
 
-import com.wave.domain.BaseTimeEntity;
+import com.wave.BaseTimeEntity;
 import com.wave.dto.MemberFormDto;
 import lombok.Builder;
 import lombok.Getter;

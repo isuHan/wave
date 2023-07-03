@@ -1,6 +1,6 @@
 package com.wave.service;
 
-import com.wave.domain.member.Member;
+import com.wave.entity.Member;
 import com.wave.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
