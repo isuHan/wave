@@ -1,6 +1,6 @@
-package com.wave.config;
+package com.wave.member.config;
 
-import com.wave.service.MemberService;
+import com.wave.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
