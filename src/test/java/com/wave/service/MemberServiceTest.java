@@ -1,7 +1,8 @@
 package com.wave.service;
 
-import com.wave.entity.Member;
-import com.wave.dto.MemberFormDto;
+import com.wave.member.entity.Member;
+import com.wave.member.dto.MemberFormDto;
+import com.wave.member.service.MemberService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;

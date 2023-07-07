@@ -1,6 +1,6 @@
-package com.wave.repository;
+package com.wave.member.repository;
 
-import com.wave.entity.Member;
+import com.wave.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
