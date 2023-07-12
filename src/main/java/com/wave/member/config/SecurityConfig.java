@@ -34,7 +34,8 @@ public class SecurityConfig {
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/members/logout"))  //로그아웃 url 을 설정한다
-                .logoutSuccessUrl("/");      //로그아웃 성공 시 이동할 url 을 설정한다.
+                .logoutSuccessUrl("/")      //로그아웃 성공 시 이동할 url 을 설정한다.
+                .invalidateHttpSession(true); //로그아웃 시 세션정보를 제거
         return http.build();
     }
 
