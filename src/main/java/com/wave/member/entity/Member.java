@@ -28,17 +28,13 @@ public class Member extends BaseTimeEntity {
     @Column(unique = true)
     private String email; //이메일
 
-    @Enumerated(EnumType.STRING)
-    private Role role; //역할 구분(일반회원, 관리자)
-
 
     @Builder
-    public Member(Long id, String name, String email, String password, String nickName, Role role) {
+    public Member(Long id, String name, String email, String password, String nickName) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.role = role;
         this.nickName = nickName;
     }
 
@@ -49,7 +45,6 @@ public class Member extends BaseTimeEntity {
                 .name(memberFormDto.getName())
                 .email(memberFormDto.getEmail())
                 .password(passwordEncoder.encode(memberFormDto.getPassword()))  //암호화처리
-                .role(Role.USER)
                 .build();
         return member;
     }

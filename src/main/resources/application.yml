@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/wave
+    url: jdbc:h2:tcp://localhost/~/wave;AUTO_SERVER=true
     username: sa
     password:
     driver-class-name: org.h2.Driver
