@@ -1,3 +1,3 @@
 # wave
 
-backend-sprintboot🪴
+backend-springboot🪴
